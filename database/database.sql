@@ -25,7 +25,7 @@ CREATE TABLE borrow_records (
 INSERT INTO books (title, author) VALUES
 ("Docker Book", "Maithreya"),
 ("Kubernetes", "Maithreya K8s"),
-("Terraform", "Maithreya Terraform");
+("Terraform", "Maithreya 44");
 
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root';
 FLUSH PRIVILEGES;
