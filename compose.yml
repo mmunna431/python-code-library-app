@@ -3,7 +3,7 @@ services:
   db:
     image: mmunna431/py-app:dbimage
     ports:
-      - "33306:3306"
+      - "3306:3306"
     deploy:
       replicas: 2
   auth_service:
