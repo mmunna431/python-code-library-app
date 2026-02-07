@@ -15,29 +15,29 @@ services:
     depends_on:
       - db
 
-    book_service:
-      image: mmunna431/py-app:bookimage
-      ports:
-        - "5002:5002"
-      deploy:
-        replicas: 2
-      depends_on:
-        - db
+  book_service:
+    image: mmunna431/py-app:bookimage
+    ports:
+      - "5002:5002"
+    deploy:
+      replicas: 2
+    depends_on:
+      - db
 
-    borrow_service:
-      image: mmunna431/py-app:borrowimage
-      ports:
-        - "5003:5003"
-      deploy:
-        replicas: 2
-      depends_on:
-        - db  
+  borrow_service:
+    image: mmunna431/py-app:borrowimage
+    ports:
+      - "5003:5003"
+    deploy:
+      replicas: 2
+    depends_on:
+      - db  
 
-    frontend:
-      image: mmunna431/py-app:appimage
-      ports:
-        - "5000:5000"
-      deploy:
-        replicas: 2
-      depends_on:
-        - db
+  frontend:
+    image: mmunna431/py-app:appimage
+    ports:
+      - "5000:5000"
+    deploy:
+      replicas: 2
+    depends_on:
+      - db
