@@ -28,7 +28,7 @@ services:
         replicas: 2
 
     frontend:
-      image: mmunna431/py-app:appmage
+      image: mmunna431/py-app:appimage
       ports:
         - "5000:5000"
       deploy:
