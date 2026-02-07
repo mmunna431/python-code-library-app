@@ -1,0 +1,35 @@
+---
+services:
+  db:
+    image: mmunna431/py-app:dbimage
+    ports:
+      - "33306:3306"
+    deploy:
+      replicas: 2
+  auth_service:
+    image: mmunna431/py-app:authimage
+    ports:
+      - "5001:5001"
+    deploy:
+      replicas: 2
+
+    book_service:
+      image: mmunna431/py-app:bookimage
+      ports:
+        - "5002:5002"
+      deploy:
+        replicas: 2
+
+    borrow_service:
+      image: mmunna431/py-app:borrowimage
+      ports:
+        - "5003:5003"
+      deploy:
+        replicas: 2
+
+    frontend:
+      image: mmunna431/py-app:appmage
+      ports:
+        - "5000:5000"
+      deploy:
+        replicas: 2
