@@ -23,7 +23,7 @@ CREATE TABLE borrow_records (
 
 -- Sample books
 INSERT INTO books (title, author) VALUES
-("Docker Book", "Mustafa"),
+("Docker Book", "Maithreya"),
 ("Kubernetes", "Mustafa Shaik"),
 ("Terraform", "Musta");
 
