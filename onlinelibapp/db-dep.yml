@@ -4,7 +4,7 @@ metadata:
   name: db-dep
   namespace: libapp
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: db-label
