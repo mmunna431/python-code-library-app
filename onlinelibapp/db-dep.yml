@@ -18,3 +18,5 @@ spec:
           image: mmunna431/py-app:db
           ports:
             - containerPort: 3306
+      imagePullSecrets:
+      - name: db-secret
