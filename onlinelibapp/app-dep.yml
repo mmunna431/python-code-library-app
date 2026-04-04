@@ -18,5 +18,15 @@ spec:
           image: mmunna431/py-app:appimage
           ports:
             - containerPort: 5000
-      imagePullSecrets:
-      - name: db-secret
+          env:
+            - name: DB_USERNAME
+              valueFrom:
+              secretKeyRef:
+                name: db-secret
+                key: username
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: db-secret
+                  key: password
+
