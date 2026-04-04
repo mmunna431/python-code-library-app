@@ -18,3 +18,5 @@ spec:
           image: mmunna431/py-app:bookimage
           ports:
             - containerPort: 5002
+      imagePullSecrets:
+      - name: db-secret
