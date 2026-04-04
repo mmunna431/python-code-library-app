@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: db-dep
+  namespace: libapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: db-label
+  template:
+    metadata:
+      labels:
+        app: db-label
+    spec:
+      containers:
+      - name: db
+        image: mmunna431/py-app:db
+        ports:
+        - containerPort: 3306

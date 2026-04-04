@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: auth-dep
+  namespace: libapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: auth-label
+  template:
+    metadata:
+      labels:
+        app: auth-label
+    spec:
+      containers:
+      - name: auth_service
+        image: mmunna431/py-app:auth_service
+        ports:
+        - containerPort: 5001

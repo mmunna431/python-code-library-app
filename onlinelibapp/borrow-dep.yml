@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: borrow-dep
+  namespace: libapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: borrow-label
+  template:
+    metadata:
+      labels:
+        app: borrow-label
+    spec:
+      containers:
+      - name: borrow_service
+        image: mmunna431/py-app:borrow_service
+        ports:
+        - containerPort: 5003

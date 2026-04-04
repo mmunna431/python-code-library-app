@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-dep
+  namespace: libapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app-label
+  template:
+    metadata:
+      labels:
+        app: app-label
+    spec:
+      containers:
+      - name: frontend
+        image: mmunna431/py-app:appimage
+        ports:
+        - containerPort: 5000

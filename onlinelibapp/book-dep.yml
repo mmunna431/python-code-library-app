@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: book-dep
+  namespace: libapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: book-label
+  template:
+    metadata:
+      labels:
+        app: book-label
+    spec:
+      containers:
+      - name: book_service
+        image: mmunna431/py-app:book_service
+        ports:
+        - containerPort: 5002
