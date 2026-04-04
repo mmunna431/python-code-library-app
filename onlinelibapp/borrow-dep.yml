@@ -17,4 +17,4 @@ spec:
         - name: borrow_service
           image: mmunna431/py-app:borrowimage
           ports:
-          - containerPort: 5003
+            - containerPort: 5003
