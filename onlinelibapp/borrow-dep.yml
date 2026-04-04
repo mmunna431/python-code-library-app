@@ -4,7 +4,7 @@ metadata:
   name: borrow-dep
   namespace: libapp
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: borrow-label
