@@ -14,7 +14,7 @@ spec:
         app: book-label
     spec:
       containers:
-        - name: book_service
+        - name: book-service
           image: mmunna431/py-app:bookimage
           ports:
             - containerPort: 5002
