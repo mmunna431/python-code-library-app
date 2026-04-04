@@ -18,3 +18,5 @@ spec:
           image: mmunna431/py-app:borrowimage
           ports:
             - containerPort: 5003
+      imagePullSecrets:
+      - name: db-secret
