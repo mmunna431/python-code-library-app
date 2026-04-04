@@ -17,4 +17,4 @@ spec:
         - name: db
           image: mmunna431/py-app:db
           ports:
-          - containerPort: 3306
+            - containerPort: 3306
