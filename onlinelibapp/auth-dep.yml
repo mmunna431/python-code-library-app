@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: auth_service
-        image: mmunna431/py-app:auth_service
+        image: mmunna431/py-app:authimage
         ports:
         - containerPort: 5001
