@@ -14,7 +14,7 @@ spec:
         app: borrow-label
     spec:
       containers:
-      - name: borrow_service
-        image: mmunna431/py-app:borrowimage
-        ports:
-        - containerPort: 5003
+        - name: borrow_service
+          image: mmunna431/py-app:borrowimage
+          ports:
+          - containerPort: 5003
