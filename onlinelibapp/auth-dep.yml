@@ -14,7 +14,7 @@ spec:
         app: auth-label
     spec:
       containers:
-      - name: auth_service
-        image: mmunna431/py-app:authimage
-        ports:
-        - containerPort: 5001
+        - name: auth_service
+          image: mmunna431/py-app:authimage
+          ports:
+          - containerPort: 5001
