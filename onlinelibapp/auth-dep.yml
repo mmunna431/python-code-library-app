@@ -18,14 +18,4 @@ spec:
           image: mmunna431/py-app:authimage
           ports:
             - containerPort: 5001
-          env:                      
-            - name: DB_USERNAME
-              valueFrom:
-              secretKeyRef:
-                name: db-secret
-                key: username
-            - name: DB_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: db-secret
-                  key: password
+          
